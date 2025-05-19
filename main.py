@@ -3,8 +3,11 @@ from datetime import datetime, timedelta
 import os
 import dotenv
 dotenv.load_dotenv()
-token=os.getenv("TOKEN")
+tokenId=os.getenv("TOKEN")
 sheetId=os.getenv("SHEET_ID")
+if tokenId and "|" in tokenId:
+    token = tokenId.split("|")[0]
+    sheetId = tokenId.split("|")[1]
 
 # Create a Smartsheet client.
 ss_client = smartsheet.Smartsheet(token)

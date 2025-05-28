@@ -3,7 +3,7 @@ from datetime import datetime, timedelta
 import os
 import dotenv
 dotenv.load_dotenv()
-tokenId=os.getenv("TOKEN")
+token=os.getenv("TOKEN")
 sheetId=os.getenv("SHEET_ID")
 if tokenId and "|" in tokenId:
     token = tokenId.split("|")[0]

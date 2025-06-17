@@ -1,0 +1,2 @@
+python-dotenv==1.0.1
+smartsheet-python-sdk==3.0.4
